@@ -1,8 +1,25 @@
+@import "styles/utils";
 
 .heroSection {
   min-height: 540px;
   text-align: center;
   padding: 57px 0 0;
+
+  @include media(">tablet") {
+    height: 910px;
+    text-align: left;
+    padding: 152px 0 0;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 30px;
+      width: 232px;
+      height: 104px;
+      background: url("/img/bg-pattern-dots.svg") no-repeat;
+      content: "";
+    }
+  }
 
   &::before {
     position: absolute;
@@ -14,10 +31,27 @@
     background-size: cover;
     content: "";
     opacity: 0.1;
+
+    @include media(">tablet") {
+      left: initial;
+      right: 0;
+      width: 491px;
+      height: 767px;
+      background: linear-gradient(rgba(84, 230, 175, 0.05), rgba(84, 230, 175, 0.2)), url("/img/tablet/image-host.jpg") no-repeat;
+      opacity: 1;
+    }
   }
 
   .container {
     position: relative;
+  }
+
+  .content {
+    @include media(">tablet") {
+      max-width: 635px;
+      background: #121725;
+      padding-top: 93px;
+    }
   }
 
   .title {
@@ -27,6 +61,12 @@
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 16px;
+
+    @include media(">tablet") {
+      font-size: 48px;
+      line-height: 56px;
+      margin-bottom: 31px;
+    }
 
     .highlight {
       display: inline-block;
@@ -40,25 +80,64 @@
     line-height: 25px;
     color: #C2CBE5;
     margin-bottom: 33px;
+
+    @include media(">tablet") {
+      width: 445px;
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .bottomContainer {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 48px;
+
+    @include media(">tablet") {
+      flex-direction: column-reverse;
+      grid-gap: 64px;
+    }
   }
 
   .partnerContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 48px;
+
+    @include media(">tablet") {
+      width: 536px;
+    }
 
     img {
       width: 100%;
       max-height: 17px;
 
+      @include media(">tablet") {
+        max-height: 29px;
+      }
+
       &[data-name='google podcasts'] {
         max-height: 11px;
+
+        @include media(">tablet") {
+          max-height: 18px;
+        }
       }
 
       &[data-name='pocket podcasts'] {
         max-height: 15px;
+
+        @include media(">tablet") {
+          max-height: 26px;
+        }
       }
+    }
+  }
+
+  .requestAccessContainer {
+    @include media(">tablet") {
+      width: 427px;
     }
   }
 }
