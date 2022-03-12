@@ -170,6 +170,10 @@
   .requestAccessContainer {
     @include media(">tablet") {
       width: 427px;
+
+      input {
+        padding-right: 180px;
+      }
     }
   }
 }
