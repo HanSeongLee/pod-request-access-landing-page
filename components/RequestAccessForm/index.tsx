@@ -28,7 +28,7 @@ const RequestAccessForm: React.FC<IProps> = ({ onSubmit }) => {
                                 message: 'Oops! Please check your email',
                             },
                         }}
-                        render={({ field }) => (
+                        render={({field}) => (
                             <Input type={'email'}
                                    placeholder={'Email address'}
                                    error={errors?.email?.message}
@@ -37,9 +37,11 @@ const RequestAccessForm: React.FC<IProps> = ({ onSubmit }) => {
                         )}
             />
 
-            <Button type={'submit'}>
-                Request Access
-            </Button>
+            <div className={styles.buttonWrapper}>
+                <Button type={'submit'}>
+                    Request Access
+                </Button>
+            </div>
         </form>
     );
 };

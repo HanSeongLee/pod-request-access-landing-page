@@ -1,6 +1,29 @@
+@import "styles/utils";
 
 .requestAccessForm {
   display: flex;
   flex-direction: column;
   grid-gap: 16px;
+
+  @include media(">tablet") {
+    position: relative;
+  }
+
+  input {
+    @include media(">tablet") {
+      height: 56px;
+    }
+  }
+
+  .buttonWrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include media(">tablet") {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px;
+    }
+  }
 }
