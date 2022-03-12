@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .button {
   font-weight: 700;
@@ -9,4 +10,12 @@
   border-radius: 28px;
   padding: 9px 27px;
   cursor: pointer;
+
+  @include media(">desktop") {
+    transition: background 0.3s;
+
+    &:hover {
+      background: #B3FFE2;
+    }
+  }
 }
