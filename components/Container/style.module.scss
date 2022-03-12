@@ -6,4 +6,11 @@
   @include media(">tablet") {
     padding: 0 39px;
   }
+
+  @include media(">desktop") {
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
 }
