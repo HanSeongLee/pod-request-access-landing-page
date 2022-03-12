@@ -1,0 +1,64 @@
+
+.heroSection {
+  min-height: 540px;
+  text-align: center;
+  padding: 57px 0 0;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(84, 230, 175, 0.2), rgba(84, 230, 175, 0.2)), url("/img/mobile/image-host.jpg") no-repeat;
+    background-size: cover;
+    content: "";
+    opacity: 0.1;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .title {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+
+    .highlight {
+      display: inline-block;
+      color: #54E6AF;
+    }
+  }
+
+  .description {
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 25px;
+    color: #C2CBE5;
+    margin-bottom: 33px;
+  }
+
+  .partnerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+
+    img {
+      width: 100%;
+      max-height: 17px;
+
+      &[data-name='google podcasts'] {
+        max-height: 11px;
+      }
+
+      &[data-name='pocket podcasts'] {
+        max-height: 15px;
+      }
+    }
+  }
+}
